@@ -1,0 +1,4 @@
+//	  @	ensures (\forall int i; 
+//	  @			0 < i && i < arrayToSort.length; 
+//	  @			arrayToSort[i-1] <= arrayToSort[i]) &&
+//	  @			arrayToSort.length == \old(arrayToSort.length);
