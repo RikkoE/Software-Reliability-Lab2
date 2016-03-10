@@ -14,8 +14,12 @@ public class generateRandom {
 
 	}
 	
+	private static final int ARRAYSIZE = 10;
+	private static final int MAXVALUE = 10;
+	private static final int SAMPLES = 300;
+
+	
 	public void genRandom() throws IOException {
-		int numberOftests = 300;
 		Random rand = new Random();
 		
 		File fout = new File("random_output.txt");
@@ -24,11 +28,11 @@ public class generateRandom {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
 	 
 		
-		for(int i = 0; i < numberOftests; i++) {
-			int[] array = new int[20];
+		for(int i = 0; i < SAMPLES; i++) {
+			int[] array = new int[ARRAYSIZE];
 
-			for (int j = 0; j < array.length; j++) {
-				array[j] = rand.nextInt(100);
+			for (int j = 0; j < ARRAYSIZE; j++) {
+				array[j] = rand.nextInt(MAXVALUE);
 			}
 			
 			String str = Arrays.toString(array);

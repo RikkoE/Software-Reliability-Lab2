@@ -21,13 +21,13 @@ public class testFramework extends TestCase {
 	private int[] numberarray;
 	private int key = -1;
 	
-	private final static String FILE = "random_output.txt"; 
+	private final static String FILE = "jenny_output.txt"; 
 	
 	private static int[][] numbers;
 	private static int[] query;
 	
-	private static int MAX = 100;
-	private static final int ARRAYSIZE = 20;
+	private static int MAX = 10;
+	private static int ARRAYSIZE = 20;
 	private static int SAMPLES = 20;
 	
 	private final static int ARRAYINDEX = 0;
@@ -59,10 +59,9 @@ public class testFramework extends TestCase {
 				        results[i] = Integer.parseInt(items[i]);
 				    } catch (NumberFormatException nfe) {};
 				}
-				
+				ARRAYSIZE = results.length;
 				inputFile.add(results);
-			} 
-			
+			}
 			SAMPLES = inputFile.size();
 			br.close();
 		} catch(Exception e){
