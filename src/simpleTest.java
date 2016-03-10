@@ -6,15 +6,15 @@ public class simpleTest {
 		
 		sort sortStuff = new sort();
 		Random rand = new Random();
-		int[] array = new int[20];
+		int[] array = new int[10];
 
 		for (int i=0;i<array.length-1;i++) {
-			array[i] = rand.nextInt(100);
+			array[i] = rand.nextInt(10);
 		}
 				
 		sortStuff.sortArray(array);	
 
-		int randommember = rand.nextInt(100);
+		int randommember = rand.nextInt(10);
 		System.out.println("Looking for member: " + randommember);
 		
 		int memberIndex = sortStuff.membQuery(array, randommember);
