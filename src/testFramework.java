@@ -21,7 +21,7 @@ public class testFramework extends TestCase {
 	private int[] numberarray;
 	private int key = -1;
 	
-	private final static String FILE = "jenny_output.txt"; 
+	private final static String FILE = "random_output.txt"; 
 	
 	private static int[][] numbers;
 	private static int[] query;
@@ -92,7 +92,7 @@ public class testFramework extends TestCase {
 		long startTime = System.currentTimeMillis();
 
 		sort sorter = new sort();
-		sorter.sortArray(numberarray);
+		numberarray = sorter.sortArray(numberarray);
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
@@ -117,7 +117,7 @@ public class testFramework extends TestCase {
 
 		if (validateMember(numberarray, key) && memberat == -1) {
 			fail("Key is a member but is not found");
-		}
+		} 
 		assertTrue(true);
 	}
 
